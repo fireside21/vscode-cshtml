@@ -1,0 +1,43 @@
+{
+    "name": "cshtml",
+    "displayName": "HTML (C#)",
+    "description": "HTML with embedded C#",
+    "version": "0.0.1",
+    "author": {
+        "name": "Michael",
+        "email": "michael@fireside21.com"
+    },
+    "publisher": "fireside21",
+    "engines": {
+        "vscode": "^1.26.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "cshtml",
+            "aliases": [
+                "HTML (C#)",
+                "HTML with embedded C#",
+                "aspx",
+                "ASPX",
+                "cshtml",
+                "CSHTML",
+                "Master Page"
+            ],
+            "extensions": [
+                ".aspx",
+                ".ascx",
+                ".cshtml",
+                ".master"
+            ],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "cshtml",
+            "scopeName": "text.html.cshtml",
+            "path": "./syntaxes/cshtml.tmLanguage.json"
+        }]
+    }
+}

@@ -1,0 +1,79 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "HTML (C#)",
+	"scopeName": "text.html.cshtml",
+	"patterns": [
+		{ "include": "#comments" },
+		{ "include": "#script-tag-cs" },
+		{ "include": "text.html.basic" }
+	],
+	"repository": {
+        "comments": {
+            "name": "comment.block.cshtml",
+            "begin": "<%--",
+            "beginCaptures": {
+                "0": { "name": "comment.block.begin.cshtml" }
+            },
+            "end": "--%>",
+            "endCaptures": {
+                "0": { "name": "comment.block.end.cshtml" }
+            },
+            "patterns": []
+        },
+        "script-tag-cs": {
+            "begin": "(<)((?i:script))[^>]+(runat)(=)(?:((')server('))|((\")server(\")))",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.metadata.script.start.html" },
+                "1": { "name": "punctuation.definition.tag.begin.html" },
+                "2": { "name": "entity.name.tag.script.html" },
+                "3": { "name": "constant.language.processing-directive.cshtml" },
+                "4": { "name": "punctuation.separator.key-value.cshtml" },
+                "5": { "name": "string.quoted.single.cshtml" },
+                "6": { "name": "punctuation.definition.string.begin.cshtml" },
+                "7": { "name": "punctuation.definition.string.end.cshtml" },
+                "8": { "name": "string.quoted.double.cshtml" },
+                "9": { "name": "punctuation.definition.string.begin.cshtml" },
+                "10": { "name": "punctuation.definition.string.end.cshtml" }
+            },
+            "end": "(/)((?i:script))(>)",
+            "endCaptures": {
+                "0": { "name": "meta.tag.metadata.script.end.html" },
+                "1": { "name": "punctuation.definition.tag.begin.html" },
+                "2": { "name": "entity.name.tag.html" },
+                "3": { "name": "punctuation.definition.tag.end.html" }
+            },
+            "patterns": [
+                {
+                    "begin": "\\G",
+                    "end": "(?=/)",
+                    "patterns": [
+                        {
+                            "begin": "(>)",
+                            "beginCaptures": {
+                                "0": { "name": "meta.tag.metadata.script.start.html" },
+                                "1": { "name": "punctuation.definition.tag.end.html" }
+                            },
+                            "end": "((<))(?=/(?i:script))",
+                            "endCaptures": {
+                                "0": { "name": "meta.tag.metadata.script.end.html" },
+                                "1": { "name": "punctuation.definition.tag.begin.html" },
+                                "2": { "name": "source.cs" }
+                            },
+                            "patterns": [
+                                {
+                                    "begin": "\\G",
+                                    "end": "(?=</(?i:script))",
+                                    "name": "source.cs",
+                                    "patterns": [
+                                        { "include": "source.cs" }
+                                    ]
+                                }
+                            ]
+                        },
+                        { "include": "text.html.basic#attribute" }
+                    ]
+                }
+            ]
+        }
+	}
+}
