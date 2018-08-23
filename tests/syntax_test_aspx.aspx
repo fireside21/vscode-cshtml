@@ -54,5 +54,6 @@
     <p><%= variable %></p>
     <p <%-- class="bar" --%>>foo</p>
     <p class="one <%-- two --%> three">foo</p>
+    <p class="one <%= otherStyle %> three">foo</p>
 </body>
 </html>

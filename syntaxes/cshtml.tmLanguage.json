@@ -78,14 +78,26 @@
                     },
                     "end": "%>",
                     "endCaptures": {
-                        "0": { "name": "punctuation.section.embedded.end.cshtml" },
-                        "1": { "name": "source.cs" }
+                        "0": { "name": "punctuation.section.embedded.end.cshtml" }
                     },
                     "name": "meta.embedded.block.cs",
                     "contentName": "source.cs",
                     "patterns": [
                         { "include": "source.cs" }
                     ]
+                },
+                {
+                    "begin": "<%(?![=#:$])",
+                    "beginCaptures": {
+                        "0": { "name": "punctuation.section.embedded.begin.cshtml" }
+                    },
+                    "end": "%>",
+                    "endCaptures": {
+                        "0": { "name": "punctuation.section.embedded.end.cshtml" }
+                    },
+                    "name": "meta.embedded.block.cs",
+                    "contentName": "source.cs",
+                    "patterns": []
                 }
             ]
         },
@@ -113,6 +125,7 @@
             },
             "patterns": [
                 {
+                    "comment": "\\G is the beginning of the line",
                     "begin": "\\G",
                     "end": "(?=/)",
                     "patterns": [

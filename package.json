@@ -2,7 +2,7 @@
     "name": "cshtml",
     "displayName": "HTML (C#)",
     "description": "HTML with embedded C#",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "author": {
         "name": "Michael",
         "email": "michael@fireside21.com"
@@ -40,6 +40,10 @@
             "language": "cshtml",
             "scopeName": "text.html.cshtml",
             "path": "./syntaxes/cshtml.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "cshtml",
+            "path": "./snippets/cshtml.snippets.json"
         }]
     }
 }

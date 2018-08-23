@@ -1,0 +1,43 @@
+{
+    "Expression": {
+        "prefix": "e=",
+        "body": [ "<%= ${1:Object} %>" ],
+        "description": "Expression"
+    },
+    "HTML Encoded Expression": {
+        "prefix": "e:",
+        "body": [ "<%: ${1:Object} %>" ],
+        "description": "HTML Encoded Expression"
+    },
+    "Databound Expression": {
+        "prefix": "e#",
+        "body": [ "<%# Eval(\"${1:Property}\") %>" ],
+        "description": "Databound Expression"
+    },
+    "Application Settings Expression": {
+        "prefix": "e$",
+        "body": [ "<%\\$ ${1:AppSettings}: ${2:key} %>" ],
+        "description": "Application Settings Expression"
+    },
+
+    "Directive": {
+        "prefix": "directive",
+        "body": [ "<%@ ${1:Directive} %>" ],
+        "description": "Directive"
+    },
+    "Page": {
+        "prefix": "page",
+        "body": [ "<%@ Page${1: Language=\"C#\"}${2: Inherits=\"${3:System.Web.UI.Page}\"} %>" ],
+        "description": "Page Directive"
+    },
+    "Control": {
+        "prefix": "control",
+        "body": [ "<%@ Control${1: Language=\"C#\"}${2: Inherits=\"${3:System.Web.UI.UserControl}\"} %>" ],
+        "description": "Control Directive"
+    },
+    "Import": {
+        "prefix": "import",
+        "body": [ "<%@ Import Namespace=\"${1:System.Net}\" %>" ],
+        "description": "Import Directive"
+    }
+}

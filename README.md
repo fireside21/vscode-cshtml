@@ -14,6 +14,10 @@ This extension is a port of the [HTML (C#)][hcs-st] for [Sublime Text][st] exten
 ### Functionality
 
 - Toggle comment (<kbd>Ctrl</kbd>+<kbd>/</kbd> or <kbd>Cmd</kbd>+<kbd>/</kbd>)
+- Snippets for `<%` expressions (Try typing `e=`)
+    + These are subject to change.
+- Snippets for some directives (Try `page` or `import`)
+    + Default attributes are subject to change.
 
 ## Requirements
 
@@ -25,7 +29,15 @@ There are currently no settings.
 
 ## Known Issues
 
-- Blocks of `<% %>` do not work. They are currently unhighlighted and should not interfere with other sections of code.
+Blocks of `<% %>` do not work. They are currently unhighlighted and should not interfere with other sections of code. This is due to [VS Code issue #20488][vscode-20488] wherein the syntax engine eagerly expects some content that does not appear until after the `%>`.
+
+You can observe the same behavior in a new VS Code tab set to the HTML syntax, and this content:
+
+``` html
+<style>
+    h1 {
+</style>
+```
 
 ## Release Notes
 
@@ -35,3 +47,4 @@ Initial buggy release
 
 [hcs-st]: https://packagecontrol.io/packages/HTML%20(C%23)
 [st]: https://www.sublimetext.com/
+[vscode-20488]: https://github.com/Microsoft/vscode/issues/20488

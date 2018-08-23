@@ -2,11 +2,14 @@
 All notable changes to the "HTML (C#)" extension will be documented in this file.
 
 ## [Unreleased]
+
+## [0.1.0] - 2018-08-23
 ### Added
-- Support for directives: `<%@ Page %>`, etc.
-- Support for `<script runat="server">`
-- Support for block comments: `<%-- --%>`
-- Support for `Response.Write` expressions: `<%=`, `<%#`, `<%:`, and `<%$`
+- Highlighting for directives: `<%@ Page %>`, etc.
+- Highlighting for `<script runat="server">`
+- Highlighting for block comments: `<%-- --%>`
+- Highlighting for `Response.Write` expressions: `<%=`, `<%#`, `<%:`, and `<%$`
+- Snippets for `Response.Write` expressions and some common Directives
 
 
 [keep-a-changelog]: https://keepachangelog.com/
