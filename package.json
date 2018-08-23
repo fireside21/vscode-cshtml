@@ -20,6 +20,7 @@
             "aliases": [
                 "HTML (C#)",
                 "HTML with embedded C#",
+                "ASP.NET",
                 "aspx",
                 "ASPX",
                 "cshtml",
@@ -32,6 +33,7 @@
                 ".cshtml",
                 ".master"
             ],
+            "firstLine": "^\\s*<%@",
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{

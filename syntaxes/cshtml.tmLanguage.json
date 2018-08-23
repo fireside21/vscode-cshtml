@@ -1,24 +1,28 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "HTML (C#)",
-	"scopeName": "text.html.cshtml",
-	"patterns": [
-		{ "include": "#comments" },
-        { "include": "#script-tag-cs" },
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "HTML (C#)",
+    "scopeName": "text.html.cshtml",
+    "patterns": [
         { "include": "#directives" },
-		{ "include": "#block-cs" },
-		{ "include": "text.html.basic" }
+        { "include": "#script-tag-cs" },
+        { "include": "text.html.basic" }
     ],
     "injections": {
-        "text.html.cshtml - (meta.embedded | meta.tag), L:text.html.cshtml meta.tag, L:text.html.cshtml source.js": {
-			"patterns": [
-				{
-					"include": "#block-cs"
-				}
-			]
-		}
+        "text.html.cshtml - (meta.embedded | meta.tag)": {
+            "patterns": [
+                { "include": "#comments" },
+                { "include": "#block-cs" }
+            ]
+        },
+        "L:text.html.cshtml meta.tag, L:text.html.cshtml source.js,  L:text.html.cshtml source.css": {
+            "comment": "The L: means 'injected to the left,' that is, first",
+            "patterns": [
+                { "include": "#comments" },
+                { "include": "#block-cs" }
+            ]
+        }
     },
-	"repository": {
+    "repository": {
         "comments": {
             "name": "comment.block.cshtml",
             "begin": "<%--",
@@ -67,21 +71,21 @@
         },
         "block-cs": {
             "patterns": [
-				{
-					"begin": "<%[=#:$]?",
-					"beginCaptures": {
-						"0": { "name": "punctuation.section.embedded.begin.cshtml" }
-					},
-					"end": "%>",
-					"endCaptures": {
-						"0": { "name": "punctuation.section.embedded.end.cshtml" },
-						"1": { "name": "source.cs" }
-					},
-					"name": "meta.embedded.block.cs",
-					"contentName": "source.cs",
-					"patterns": [
-						{ "include": "source.cs" }
-					]
+                {
+                    "begin": "<%[=#:$]",
+                    "beginCaptures": {
+                        "0": { "name": "punctuation.section.embedded.begin.cshtml" }
+                    },
+                    "end": "%>",
+                    "endCaptures": {
+                        "0": { "name": "punctuation.section.embedded.end.cshtml" },
+                        "1": { "name": "source.cs" }
+                    },
+                    "name": "meta.embedded.block.cs",
+                    "contentName": "source.cs",
+                    "patterns": [
+                        { "include": "source.cs" }
+                    ]
                 }
             ]
         },
@@ -140,5 +144,5 @@
                 }
             ]
         }
-	}
+    }
 }

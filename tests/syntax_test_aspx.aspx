@@ -27,9 +27,19 @@
         var foo = "bar";
         for(var i = 0; i < 10; i++)
         {
+            <%-- CS Comments in a JS block --%>
+            // JS line comments
+            /* JS block comments */
             foo += foo;
         }
     </script>
+    <style>
+        p {
+            <%-- CS Comments in a CSS block --%>
+            /* CSS block comments */
+            color: <%= blue %>;
+        }
+    </style>
 </head>
 <body>
     <my:Bar runat="server" />
@@ -42,5 +52,7 @@
     <a href="<%= bullion ? url : "http://other.com" %>">link</a>
 
     <p><%= variable %></p>
+    <p <%-- class="bar" --%>>foo</p>
+    <p class="one <%-- two --%> three">foo</p>
 </body>
 </html>
