@@ -8,13 +8,13 @@
         { "include": "text.html.basic" }
     ],
     "injections": {
-        "text.html.cshtml - (meta.embedded | meta.tag)": {
+        "text.html.cshtml - (meta.embedded | meta.tag | comment.block.cshtml)": {
             "patterns": [
                 { "include": "#comments" },
                 { "include": "#block-cs" }
             ]
         },
-        "L:text.html.cshtml meta.tag, L:text.html.cshtml source.js,  L:text.html.cshtml source.css": {
+        "L:text.html.cshtml meta.tag, L:text.html.cshtml source.js - (comment.block.cshtml),  L:text.html.cshtml source.css - (comment.block.cshtml)": {
             "comment": "The L: means 'injected to the left,' that is, first",
             "patterns": [
                 { "include": "#comments" },
