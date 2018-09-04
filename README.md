@@ -41,10 +41,9 @@ You can observe the same behavior in a new VS Code tab set to the HTML syntax, a
 
 ## Release Notes
 
-### 0.0.1
-
-Initial buggy release
+See [changelog][]
 
 [hcs-st]: https://packagecontrol.io/packages/HTML%20(C%23)
 [st]: https://www.sublimetext.com/
 [vscode-20488]: https://github.com/Microsoft/vscode/issues/20488
+[changelog]: CHANGELOG.md

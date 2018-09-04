@@ -15,7 +15,7 @@
             ]
         },
         "L:text.html.cshtml meta.tag, L:text.html.cshtml source.js - (comment.block.cshtml),  L:text.html.cshtml source.css - (comment.block.cshtml)": {
-            "comment": "The L: means 'injected to the left,' that is, first",
+            "comment": "The L: means 'injected to the left,' that is, before other possible matches",
             "patterns": [
                 { "include": "#comments" },
                 { "include": "#block-cs" }

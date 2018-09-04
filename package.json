@@ -2,7 +2,7 @@
     "name": "cshtml",
     "displayName": "HTML (C#)",
     "description": "HTML with embedded C#",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": {
         "name": "Michael",
         "email": "michael@fireside21.com"
