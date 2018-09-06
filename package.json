@@ -8,6 +8,14 @@
         "email": "michael@fireside21.com"
     },
     "publisher": "fireside21",
+    "homepage": "https://github.com/fireside21/vscode-cshtml/blob/master/README.md",
+    "bugs": {
+        "url": "https://github.com/fireside21/vscode-cshtml/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fireside21/vscode-cshtml.git"
+    },
     "engines": {
         "vscode": "^1.26.0"
     },
