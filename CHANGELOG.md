@@ -2,6 +2,8 @@
 All notable changes to the "HTML (C#)" extension will be documented in this file.
 
 ## [Unreleased][]
+
+## [0.1.3][] - 2018-09-21
 ### Added
 - Detection for Application directives
 - To-Do list
@@ -38,7 +40,8 @@ All notable changes to the "HTML (C#)" extension will be documented in this file
 
 [keep-a-changelog]: https://keepachangelog.com/
 
-[Unreleased]: https://github.com/fireside21/vscode-cshtml/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/fireside21/vscode-cshtml/compare/v0.1.3...HEAD
+[0.1.2]: https://github.com/fireside21/vscode-cshtml/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/fireside21/vscode-cshtml/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/fireside21/vscode-cshtml/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/fireside21/vscode-cshtml/compare/6240d17dc690c44f68b62f21c71492501fc259e2...v0.1.0
