@@ -63,6 +63,11 @@ Because `<%=` and other constructs share the same closing sequence (`%>`) as `<%
 
 See the [change log][changelog].
 
+## To-Do
+
+- Inject custom tag attribute for `runat="server"`
+- Consider namespaced tags to be legitimate. Perhaps even specially identify `asp`-namespaced tags.
+
 [marketplace]: https://marketplace.visualstudio.com/items?itemName=fireside21.cshtml
 
 [badge-version]: https://vsmarketplacebadge.apphb.com/version-short/fireside21.cshtml.svg

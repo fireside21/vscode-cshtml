@@ -5,6 +5,9 @@ All notable changes to the "HTML (C#)" extension will be documented in this file
 ### Added
 - Detection for Application directives
 
+### Changed
+- `<script runat="server"` no longer case-sensitive
+
 ## [0.1.2][] - 2018-09-15
 ### Added
 - A simple icon
