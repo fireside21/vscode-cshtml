@@ -58,7 +58,7 @@
                             }
                         },
                         {
-                            "match": "\\s*(Page|Control|Import|Implements|Register|Assembly|OutputCache|Reference|Master|PreviousPageType|MasterType|WebHandler)\\b(?:(=)\"([^\"]+)\")?",
+                            "match": "\\s*(Application|Page|Control|Import|Implements|Register|Assembly|OutputCache|Reference|Master|PreviousPageType|MasterType|WebHandler)\\b(?:(=)\"([^\"]+)\")?",
                             "captures": {
                                 "1": { "name": "constant.language.processing-directive.cshtml" },
                                 "2": { "name": "punctuation.separator.key-value.cshtml" },

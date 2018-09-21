@@ -2,6 +2,8 @@
 All notable changes to the "HTML (C#)" extension will be documented in this file.
 
 ## [Unreleased][]
+### Added
+- Detection for Application directives
 
 ## [0.1.2][] - 2018-09-15
 ### Added
