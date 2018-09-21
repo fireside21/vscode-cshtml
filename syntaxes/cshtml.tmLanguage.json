@@ -102,7 +102,7 @@
             ]
         },
         "script-tag-cs": {
-            "begin": "(<)((?i:script))[^>]+(runat)(=)(?:((')server('))|((\")server(\")))",
+            "begin": "(?i)(<)(script)[^>]+(runat)(=)(?:((')server('))|((\")server(\")))",
             "beginCaptures": {
                 "0": { "name": "meta.tag.metadata.script.start.html" },
                 "1": { "name": "punctuation.definition.tag.begin.html" },

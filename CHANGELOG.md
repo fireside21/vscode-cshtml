@@ -4,6 +4,7 @@ All notable changes to the "HTML (C#)" extension will be documented in this file
 ## [Unreleased][]
 ### Added
 - Detection for Application directives
+- To-Do list
 
 ### Changed
 - `<script runat="server"` no longer case-sensitive
